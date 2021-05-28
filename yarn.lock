@@ -505,6 +505,11 @@ crypto-browserify@3.12.0, crypto-browserify@^3.11.0:
     randombytes "^2.0.0"
     randomfill "^1.0.3"
 
+css-shorthand-expanders@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/css-shorthand-expanders/-/css-shorthand-expanders-1.1.0.tgz#81a933c17db745911ac9ffa374a63f14e66bab76"
+  integrity sha512-xGfP6gpQ9Zjka3M8ExC1bU6xhdwByIl0DxDIzMHNRa6e44Lxnwh7dXEAftPDTeIiMX+1Wh5qQw2BINz3R4O2eg==
+
 css.escape@1.5.1:
   version "1.5.1"
   resolved "https://registry.yarnpkg.com/css.escape/-/css.escape-1.5.1.tgz#42e27d4fa04ae32f931a4b4d4191fa9cddee97cb"
