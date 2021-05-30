@@ -13,14 +13,14 @@ const Header: React.FC = () => (
                     </a>
                 </div>
 
-                <div className={styles.headerNav}>
+                {/* <div className={styles.headerNav}>
                     <RaisedButton
                         label="お問い合わせ"
                         width={220}
                         height={48}
                         isDark={false}
                     />
-                </div>
+                </div> */}
             </div>
         </div>
     </header>
