@@ -1,11 +1,10 @@
 .header {
-   height: 114px;
-   padding: 24px 0;
+   padding: 20px 0;
 }
 
 .headerLogo img {
-    width: 66px;
-    height: 66px;
+    width: 56px;
+    height: 56px;
 }
 
 .headerNav {

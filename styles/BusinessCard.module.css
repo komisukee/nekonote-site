@@ -1,10 +1,5 @@
 .businessCard {
-    width: 48%;
-    min-height: 100px;
-    color: #606060;
-    background-color: #ECF1F4;
     border-radius: 20px;
-    margin-bottom: 32px;
     padding: 24px;
 }
 
