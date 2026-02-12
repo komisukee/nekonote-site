@@ -1,14 +1,15 @@
 import RaisedButton from "../components/RaisedButton";
 import styles from "../styles/Header.module.css";
+import Link from "next/link";
 
 const Header: React.FC = () => (
   <header>
     <div className="container">
       <div className="flex items-center py-4">
         <div className={styles.headerLogo}>
-          <a href="/">
+          <Link href="/">
             <img src="/logo.svg" alt="ネコノテ合同会社" />
-          </a>
+          </Link>
         </div>
 
         <div className={`${styles.headerNav}`}>

@@ -44,7 +44,7 @@ export default function Home() {
     },
     {
       title: "所在地",
-      content: <p>千葉県袖ケ浦市奈良輪336-301号室</p>,
+      content: <p>千葉県袖ケ浦市奈良輪336</p>,
     },
     {
       title: "資本金",
