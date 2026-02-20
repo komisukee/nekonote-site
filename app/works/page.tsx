@@ -1,16 +1,8 @@
+import Work from "@/types/work";
 import Image from "next/image";
 import Link from "next/link";
 
-interface Work {
-  id: string;
-  companyName: string;
-  title: string;
-  content: string;
-  images: { url: string; width: string; height: string }[];
-  tags: { name: string }[];
-}
-
-const fetchProjects = () => {
+const fetchWorks = () => {
   const res = fetch("https://gw0hltye63.microcms.io/api/v1/works", {
     headers: {
       "X-MICROCMS-API-KEY": process.env.NEXT_PUBLIC_MICROCMS_API_KEY || "",
@@ -18,13 +10,14 @@ const fetchProjects = () => {
     cache: "force-cache",
   });
   return res.then((res) => {
-    if (!res.ok) throw new Error("Failed to fetch projects");
+    if (!res.ok) throw new Error("Failed to fetch works");
     return res.json().then((data) => data.contents as Work[]);
   });
 };
 
-const ProjectCard: React.FC<{ project: Work }> = ({ project }) => (
-  <div
+const WorkCard: React.FC<{ project: Work }> = ({ project }) => (
+  <Link
+    href={`/works/${project.id}`}
     key={project.id}
     className="min-h-[360px] bg-gray-200 rounded-lg border border-[#efefef] flex flex-col gap-4 shadow-md p-4"
   >
@@ -47,31 +40,29 @@ const ProjectCard: React.FC<{ project: Work }> = ({ project }) => (
         </li>
       ))}
     </ul>
-  </div>
+  </Link>
 );
 
 export default async function WorksPage() {
-  const [projects] = await Promise.all([await fetchProjects()]);
+  const [works] = await Promise.all([await fetchWorks()]);
 
   return (
     <div className="flex flex-col gap-20">
-      <div id="works">
-        <div className="container">
-          <div className="flex flex-col items-center gap-8">
-            <h1 className="font-bold text-primary-dark text-[32px] tracking-wider flex flex-col gap-2">
-              <span className="text-sm">WORKS</span>
-              <span className="bg-[linear-gradient(transparent_80%,#ffd803_80%)]">実績</span>
-            </h1>
+      <div className="container">
+        <div className="flex flex-col items-center gap-8">
+          <h1 className="font-bold text-primary-dark md:text-[32px] text-[20px] tracking-wider flex flex-col items-center gap-2">
+            <span className="text-sm">WORKS</span>
+            <span className="bg-[linear-gradient(transparent_80%,#ffd803_80%)]">実績</span>
+          </h1>
 
-            <p className="text-primary-dark text-md tracking-wider">
-              これまでに弊社が携わったプロジェクトの一部をご紹介します。
-            </p>
+          <p className="text-primary-dark text-md tracking-wider">
+            これまでに弊社が携わったプロジェクトの一部をご紹介します。
+          </p>
 
-            <div className="w-full grid grid-cols-3 gap-4">
-              {projects.map((project) => (
-                <ProjectCard key={project.id} project={project} />
-              ))}
-            </div>
+          <div className="w-full grid md:grid-cols-3 grid-cols-1 gap-4">
+            {works.map((work) => (
+              <WorkCard key={work.id} project={work} />
+            ))}
           </div>
         </div>
       </div>

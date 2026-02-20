@@ -5,18 +5,20 @@ const Home = () => {
   return (
     <div className="flex flex-col gap-20">
       <div id="mv">
-        <div className="w-full h-[600px] flex flex-col justify-center items-start px-10 bg-[url('/mainVisual.png')] bg-cover bg-center rounded-2xl">
+        <div className="w-full md:h-[600px] h-[calc(100vh_-_76px)] flex flex-col justify-start items-start md:px-10 bg-[url('/mainVisual.png')] bg-cover bg-center">
           <div className="container">
-            <div className="flex flex-col items-start justify-center gap-6">
-              <h1 className="font-bold text-[32px] tracking-wider leading-9 bg-[linear-gradient(transparent_80%,#ffd803_80%)]">
+            <div className="w-full flex flex-col items-start justify-center gap-6">
+              <h1 className="font-bold md:text-[32px] text-[20px] tracking-wider md:leading-9 leading-7 bg-[linear-gradient(transparent_80%,#ffd803_80%)]">
                 “ネコノテ” も借りたい、
                 <br className="lg:hidden block" />
                 そんなあなたに。
               </h1>
-              <p className="tracking-wider leading-6">
+              <p className="tracking-wider leading-6 text-md">
                 私達は、テクノロジーを道具に
                 <br />
-                みなさまの思いを叶えるリーディングカンパニーです。
+                みなさまの思いを叶える
+                <br className="md:hidden block" />
+                リーディングカンパニーです。
               </p>
             </div>
           </div>
@@ -26,7 +28,7 @@ const Home = () => {
       <div id="ours">
         <div className="container">
           <div className={`flex flex-col items-start gap-6`}>
-            <h2 className="font-bold text-primary-dark text-[32px] tracking-wider flex flex-col gap-2">
+            <h2 className="font-bold text-primary-dark md:text-[32px] text-[20px] tracking-wider flex flex-col gap-2">
               <span className="text-sm">ABOUT US</span>
               <span className="bg-[linear-gradient(transparent_80%,#ffd803_80%)]">
                 私たちについて
@@ -53,41 +55,67 @@ const Home = () => {
       <div id="businessInfo">
         <div className="container">
           <div className="flex flex-col items-start gap-8">
-            <h2 className="font-bold text-primary-dark text-[32px] tracking-wider flex flex-col gap-2">
+            <h2 className="font-bold text-primary-dark md:text-[32px] text-[20px] tracking-wider flex flex-col gap-2">
               <span className="text-sm">BUSINESS</span>
               <span className="block bg-[linear-gradient(transparent_80%,#ffd803_80%)]">
                 事業内容
               </span>
             </h2>
 
-            <div className="w-full grid lg:grid-cols-2 grid-cols-1 lg:gap-6 gap-4 items-start">
-              <div className="w-full grid grid-cols-1 lg:gap-6 gap-4">
-                <div className="relative rounded-2xl overflow-hidden shadow-lg h-[160px]">
-                  <img
-                    src="/IMG_7750.jpg"
-                    className="absolute  top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
-                    alt="プロダクト開発、技術アドバイザー事業"
-                  />
-                </div>
+            <div className="w-full grid lg:grid-cols-3 grid-cols-1 lg:gap-6 gap-4 items-start">
+              <Link href="#development" className="w-full">
+                <div className="w-full grid grid-cols-1 lg:gap-6 gap-4">
+                  <div className="relative rounded-2xl overflow-hidden shadow-lg h-[160px]">
+                    <img
+                      src="/IMG_7750.jpg"
+                      className="absolute  top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
+                      alt="プロダクト開発、技術アドバイザー事業"
+                    />
+                  </div>
 
-                <div className="flex flex-col justify-center col-span-2 gap-4">
-                  <h3 className="text-primary-dark text-xl font-bold">プロダクト開発事業</h3>
+                  <div className="flex flex-col justify-center col-span-2 gap-4">
+                    <h3 className="text-primary-dark md:text-xl text-lg font-bold">
+                      プロダクト開発事業
+                    </h3>
+                  </div>
                 </div>
-              </div>
+              </Link>
 
-              <div className="w-full grid grid-cols-1 lg:gap-6 gap-4">
-                <div className="relative rounded-2xl overflow-hidden shadow-lg h-[160px]">
-                  <img
-                    src="/business_contents.jpg"
-                    className="absolute  top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
-                    alt="コンテンツ制作事業"
-                  />
-                </div>
+              <Link href="#contents" className="w-full">
+                <div className="w-full grid grid-cols-1 lg:gap-6 gap-4">
+                  <div className="relative rounded-2xl overflow-hidden shadow-lg h-[160px]">
+                    <img
+                      src="/business_contents.jpg"
+                      className="absolute  top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
+                      alt="コンテンツ制作/メディア運営事業"
+                    />
+                  </div>
 
-                <div className="flex flex-col justify-center col-span-2 gap-4">
-                  <h3 className="text-primary-dark text-xl font-bold">コンテンツ制作事業</h3>
+                  <div className="flex flex-col justify-center col-span-2 gap-4">
+                    <h3 className="text-primary-dark md:text-xl text-lg font-bold">
+                      コンテンツ制作/メディア運営事業
+                    </h3>
+                  </div>
                 </div>
-              </div>
+              </Link>
+
+              <Link href="#community" className="w-full">
+                <div className="w-full grid grid-cols-1 lg:gap-6 gap-4">
+                  <div className="relative rounded-2xl overflow-hidden shadow-lg h-[160px]">
+                    <img
+                      src="/business_contents.jpg"
+                      className="absolute  top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
+                      alt="スクール/コミュニティ事業"
+                    />
+                  </div>
+
+                  <div className="flex flex-col justify-center col-span-2 gap-4">
+                    <h3 className="text-primary-dark md:text-xl text-lg font-bold">
+                      スクール/コミュニティ事業
+                    </h3>
+                  </div>
+                </div>
+              </Link>
             </div>
           </div>
         </div>
@@ -96,7 +124,7 @@ const Home = () => {
       <div id="development">
         <div className="container">
           <div className="flex flex-col items-start gap-8">
-            <h3 className="font-bold text-primary-dark text-[26px] tracking-wider flex flex-col gap-2">
+            <h3 className="font-bold text-primary-dark md:text-[26px] text-[20px] tracking-wider flex flex-col gap-2">
               <span className="text-sm">DEVELOPMENT</span>
               <span className="bg-[linear-gradient(transparent_80%,#ffd803_80%)]">
                 プロダクト開発事業
@@ -114,7 +142,7 @@ const Home = () => {
             </p>
 
             <div className="flex flex-col gap-2">
-              <h4 className="font-bold text-xl">担当領域</h4>
+              <h4 className="font-bold md:text-xl text-lg">担当領域</h4>
               <ul className="list-disc list-inside pl-4 text-primary-dark text-md tracking-wider">
                 <li>機能設計</li>
                 <li>開発</li>
@@ -124,7 +152,7 @@ const Home = () => {
             </div>
 
             <div className="flex flex-col gap-2">
-              <h4 className="font-bold text-xl">対応実績のある技術スタック</h4>
+              <h4 className="font-bold md:text-xl text-lg">対応実績のある技術スタック</h4>
               <ul className="list-disc list-inside pl-4 text-primary-dark text-md tracking-wider">
                 <li>フロントエンド：React(Next.js), Vue.js(Nuxt), TailwindCSS, Storybook</li>
                 <li>バックエンド：TypeScript, Go, GraphQL</li>
@@ -137,13 +165,13 @@ const Home = () => {
             </div>
 
             <div className="flex flex-col gap-2">
-              <h4 className="font-bold text-xl">エンジニア紹介</h4>
-              <div className="flex items-center gap-4">
+              <h4 className="font-bold md:text-xl text-lg">エンジニア紹介</h4>
+              <div className="flex items-center md:flex-row flex-col gap-4">
                 <div className="w-[160px] h-[160px] relative rounded-full overflow-hidden">
                   <Image src="/IMG_7733.jpg" alt="小宮山貴史" layout="fill" objectFit="cover" />
                 </div>
                 <div className="flex flex-col gap-2 flex-1">
-                  <p className="font-bold text-xl">小宮山 貴史</p>
+                  <p className="font-bold md:text-xl text-lg">小宮山 貴史</p>
                   <p className="text-md text-gray-600">
                     業界歴8年のシステムエンジニアとして活動。
                     <br />
@@ -169,17 +197,16 @@ const Home = () => {
 
       <div id="contents">
         <div className="container">
-          <div className={`flex flex-col items-start gap-6`}>
-            <h3 className="font-bold text-primary-dark text-[26px] tracking-wider flex flex-col gap-2">
+          <div className="flex flex-col items-start gap-6">
+            <h3 className="font-bold text-primary-dark md:text-[26px] text-[20px] tracking-wider flex flex-col gap-2">
               <span className="text-sm">CONTENTS</span>
               <span className="bg-[linear-gradient(transparent_80%,#ffd803_80%)]">
-                コンテンツ制作事業
+                コンテンツ制作/メディア運営事業
               </span>
             </h3>
 
             <p className="text-primary-dark text-md tracking-wider">
-              Webメディアのコンテンツ制作を請け負います。
-              <br />
+              Webメディアのコンテンツ制作から運営・改善まで一貫してサポートします。企業noteやオウンドメディア、導入事例記事など、目的に応じた企画・取材・執筆を実施。メディア運営やコンテンツ戦略のコンサルティングを通じて、継続的に価値が届く情報発信を実現します。
             </p>
 
             <Link
@@ -201,10 +228,27 @@ const Home = () => {
         </div>
       </div>
 
+      <div id="community">
+        <div className="container">
+          <div className="flex flex-col items-start gap-6">
+            <h3 className="font-bold text-primary-dark md:text-[26px] text-[20px] tracking-wider flex flex-col gap-2">
+              <span className="text-sm">COMMUNITY</span>
+              <span className="bg-[linear-gradient(transparent_80%,#ffd803_80%)]">
+                スクール/コミュニティ事業
+              </span>
+            </h3>
+
+            <p className="text-primary-dark text-md tracking-wider">
+              取材・編集・広報が学べる実践型オンラインスクール「Marbleスクール」を運営し、100名以上の卒業生を輩出しています。「書く」を深めるための「Marbleコミュニティ」も運営。ゲストを招いた勉強会や、ワーケーションなどのイベントを定期開催しています。
+            </p>
+          </div>
+        </div>
+      </div>
+
       <div id="contact" className="bg-[rgb(71,158,187,0.6)] py-10">
         <div className="container">
           <div className="flex flex-col items-center gap-6 py-10">
-            <h3 className="font-bold text-white text-[32px] tracking-wider flex flex-col items-center gap-2">
+            <h3 className="font-bold text-white md:text-[32px] text-[20px] tracking-wider flex flex-col items-center gap-2">
               <span className="text-sm">CONTACT</span>
               <span className="bg-[linear-gradient(transparent_80%,#ffd803_80%)]">
                 お問い合わせ
@@ -224,7 +268,7 @@ const Home = () => {
             >
               <div className="flex flex-col gap-2">
                 <label className="font-bold" htmlFor="company">
-                  会社名
+                  会社名(任意)
                 </label>
                 <input
                   type="text"
@@ -244,6 +288,7 @@ const Home = () => {
                   name="name"
                   placeholder="お名前"
                   className="w-full p-3 rounded-lg text-gray-700 focus:outline-none focus:ring-2 focus:ring-primary-light"
+                  required
                 />
               </div>
               <div className="flex flex-col gap-2">
@@ -256,6 +301,7 @@ const Home = () => {
                   name="email"
                   placeholder="メールアドレス"
                   className="w-full p-3 rounded-lg text-gray-700 focus:outline-none focus:ring-2 focus:ring-primary-light"
+                  required
                 />
               </div>
               <div className="flex flex-col gap-2">
@@ -264,12 +310,12 @@ const Home = () => {
                 </label>
                 <div className="grid grid-cols-2 gap-2">
                   <label htmlFor="development_business" className="flex items-center gap-2">
-                    <input type="radio" id="development_business" name="business" />
+                    <input type="radio" id="development_business" name="business" required />
                     プロダクト開発事業
                   </label>
                   <label htmlFor="content_business" className="flex items-center gap-2">
-                    <input type="radio" id="content_business" name="business" />
-                    コンテンツ制作事業
+                    <input type="radio" id="content_business" name="business" required />
+                    コンテンツ制作/メディア運営事業
                   </label>
                 </div>
               </div>
@@ -279,11 +325,11 @@ const Home = () => {
                 </label>
                 <div className="grid grid-cols-2 gap-2">
                   <label htmlFor="inquiry_type_project" className="flex items-center gap-2">
-                    <input type="radio" id="inquiry_type_project" name="inquiry_type" />
+                    <input type="radio" id="inquiry_type_project" name="inquiry_type" required />
                     案件のご相談
                   </label>
                   <label htmlFor="inquiry_type_other" className="flex items-center gap-2">
-                    <input type="radio" id="inquiry_type_other" name="inquiry_type" />
+                    <input type="radio" id="inquiry_type_other" name="inquiry_type" required />
                     その他お問い合わせ
                   </label>
                 </div>
@@ -297,6 +343,7 @@ const Home = () => {
                   placeholder="お問い合わせ内容"
                   name="message"
                   className="w-full p-3 rounded-lg text-gray-700 focus:outline-none focus:ring-2 focus:ring-primary-light h-[150px]"
+                  required
                 ></textarea>
               </div>
               <button

@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 interface CompanyInfo {
   id: string;
   title: string;
@@ -62,20 +64,14 @@ const companyInfoLists: CompanyInfo[] = [
 
 export default function CompanyPage() {
   return (
-    <>
+    <div className="flex flex-col gap-20">
       <div id="companyInfo">
         <div className="container">
-          <div className={`flex flex-col items-start gap-6`}>
-            <h2 className="font-bold text-primary-dark text-[32px] tracking-wider flex flex-col gap-2">
+          <div className="flex flex-col items-center gap-6">
+            <h1 className="font-bold text-primary-dark md:text-[32px] text-[20px] tracking-wider flex flex-col items-center gap-2">
               <span className="text-sm">COMPANY</span>
-              <span
-                style={{
-                  background: "linear-gradient(transparent 80%, #ffd803 80%)",
-                }}
-              >
-                会社概要
-              </span>
-            </h2>
+              <span className="bg-[linear-gradient(transparent_80%,#ffd803_80%)]">会社概要</span>
+            </h1>
 
             <table
               className="w-full"
@@ -113,6 +109,30 @@ export default function CompanyPage() {
           </div>
         </div>
       </div>
-    </>
+
+      <div id="contact" className="bg-[rgb(71,158,187,0.6)] py-10">
+        <div className="container">
+          <div className="flex flex-col items-center gap-6 py-10">
+            <h3 className="font-bold text-white text-[32px] tracking-wider flex flex-col items-center gap-2">
+              <span className="text-sm">CONTACT</span>
+              <span className="bg-[linear-gradient(transparent_80%,#ffd803_80%)]">
+                お問い合わせ
+              </span>
+            </h3>
+
+            <p className="text-white text-md text-center tracking-wider">
+              ご依頼・ご相談等、お気軽にお問い合わせください。
+            </p>
+
+            <Link
+              href="/#contact"
+              className="bg-secondary text-primary-dark font-bold py-2 px-6 rounded-lg hover:bg-gray-100 transition-colors"
+            >
+              <span>お問い合わせ</span>
+            </Link>
+          </div>
+        </div>
+      </div>
+    </div>
   );
 }
