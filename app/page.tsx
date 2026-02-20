@@ -114,7 +114,7 @@ const Home = () => {
             </p>
 
             <div className="flex flex-col gap-2">
-              <h4 className="font-bold">担当領域</h4>
+              <h4 className="font-bold text-xl">担当領域</h4>
               <ul className="list-disc list-inside pl-4 text-primary-dark text-md tracking-wider">
                 <li>機能設計</li>
                 <li>開発</li>
@@ -124,7 +124,7 @@ const Home = () => {
             </div>
 
             <div className="flex flex-col gap-2">
-              <h4 className="font-bold">対応実績のある技術スタック</h4>
+              <h4 className="font-bold text-xl">対応実績のある技術スタック</h4>
               <ul className="list-disc list-inside pl-4 text-primary-dark text-md tracking-wider">
                 <li>フロントエンド：React(Next.js), Vue.js(Nuxt), TailwindCSS, Storybook</li>
                 <li>バックエンド：TypeScript, Go, GraphQL</li>
@@ -137,6 +137,27 @@ const Home = () => {
                   その他：デザインシステム構築、リアーキテクチャ、StripeSDKを利用した決済システム構築実績あり
                 </li>
               </ul>
+            </div>
+
+            <div className="flex flex-col gap-2">
+              <h4 className="font-bold text-xl">エンジニア紹介</h4>
+              <div className="flex items-center gap-4">
+                <div className="w-[160px] h-[160px] relative rounded-full overflow-hidden">
+                  <Image src="/IMG_7733.jpg" alt="小宮山貴史" layout="fill" objectFit="cover" />
+                </div>
+                <div className="flex flex-col gap-2 flex-1">
+                  <p className="font-bold text-xl">小宮山 貴史</p>
+                  <p className="text-md text-gray-600">
+                    業界歴8年のシステムエンジニアとして活動。
+                    <br />
+                    大学時代にITの仕事と出会い、その楽しさに魅了される。
+                    <br />
+                    株式会社サイバーエージェントの教育事業でインターンし、プログラミング教育に関わる。新卒で入社した制作会社で1年Webサイトの制作やフロントエンド開発を経験。
+                    <br />
+                    その後独立し、スタートアップ企業を中心にWebアプリケーションの事業開発・請負開発に携わる。
+                  </p>
+                </div>
+              </div>
             </div>
 
             <Link
