@@ -36,7 +36,7 @@ const Home = () => {
             <p className="text-primary-dark text-md tracking-wider">
               私たちは、お客様の願いの実現を第一に考え、最適なITソリューションを提供する会社です。
               <br />
-              会社としては5期目を迎え、これまで多くのスタートアップ企業様や中小企業様の事業支援をしてまいりました。
+              会社としては2026年で6期目を迎え、これまで多くのスタートアップ企業様や中小企業様の事業支援をしてまいりました。
               <br />
               <br />
               AI技術が急速に進化する昨今、IT技術やクリエイティブ力を道具として活かしながら、
@@ -95,7 +95,7 @@ const Home = () => {
 
       <div id="development">
         <div className="container">
-          <div className={`flex flex-col items-start gap-6`}>
+          <div className="flex flex-col items-start gap-8">
             <h3 className="font-bold text-primary-dark text-[26px] tracking-wider flex flex-col gap-2">
               <span className="text-sm">DEVELOPMENT</span>
               <span className="bg-[linear-gradient(transparent_80%,#ffd803_80%)]">
@@ -129,10 +129,7 @@ const Home = () => {
                 <li>フロントエンド：React(Next.js), Vue.js(Nuxt), TailwindCSS, Storybook</li>
                 <li>バックエンド：TypeScript, Go, GraphQL</li>
                 <li>モバイル：Flutter</li>
-                <li>
-                  インフラ：AWS(EC2, ECS, EKS, Lambda, CloudFront, Cognito, S3, RDS, DynamoDB など),
-                  GCP(GCE, GKE, CloudSQL, CloudRun, CloudStorage など)
-                </li>
+                <li>インフラ：AWS,GCPの各種サービス ※Terraformによる構築自動化の経験あり</li>
                 <li>
                   その他：デザインシステム構築、リアーキテクチャ、StripeSDKを利用した決済システム構築実績あり
                 </li>
