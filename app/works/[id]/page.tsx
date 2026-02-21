@@ -3,6 +3,22 @@ import Image from "next/image";
 import Link from "next/link";
 import parse from "html-react-parser";
 
+export const generateStaticParams = () => {
+  const res = fetch("https://gw0hltye63.microcms.io/api/v1/works", {
+    headers: {
+      "X-MICROCMS-API-KEY": process.env.NEXT_PUBLIC_MICROCMS_API_KEY || "",
+    },
+    cache: "force-cache",
+  });
+  return res.then((res) => {
+    if (!res.ok) throw new Error("Failed to fetch works for static params");
+    return res.json().then((data) => {
+      const works = data.contents as Work[];
+      return works.map((work) => ({ id: work.id }));
+    });
+  });
+};
+
 const fetchProject = async (id: string) => {
   console.log(id);
   const res = fetch(`https://gw0hltye63.microcms.io/api/v1/works/${id}`, {
