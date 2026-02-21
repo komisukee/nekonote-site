@@ -4,8 +4,8 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "export": "next build && next export",
-    "serve": "yarn export && serve ./out"
+    "build": "next build",
+    "start": "next start"
   },
   "dependencies": {
     "css-shorthand-expanders": "^1.1.0",
