@@ -215,14 +215,7 @@ const Home = () => {
               rel="noopener noreferrer"
               className="font-bold flex items-center gap-1"
             >
-              <span>共創型の編集チーム「ネコノテ編集部」について</span>
-              <Image
-                src="open_in_new.svg"
-                alt="外部リンクアイコン"
-                width={20}
-                height={20}
-                className="border-primary-dark"
-              />
+              <span>共創型の編集チーム「ネコノテ編集部」について（外部サイト）</span>
             </Link>
           </div>
         </div>
@@ -241,6 +234,15 @@ const Home = () => {
             <p className="text-primary-dark text-md tracking-wider">
               取材・編集・広報が学べる実践型オンラインスクール「Marbleスクール」を運営し、100名以上の卒業生を輩出しています。「書く」を深めるための「Marbleコミュニティ」も運営。ゲストを招いた勉強会や、ワーケーションなどのイベントを定期開催しています。
             </p>
+
+            <Link
+              href="https://marble-school.studio.site/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-bold flex items-center gap-1"
+            >
+              <span>Marbleスクール公式サイト（外部サイト）</span>
+            </Link>
           </div>
         </div>
       </div>
@@ -251,7 +253,7 @@ const Home = () => {
             <h3 className="font-bold text-white md:text-[32px] text-[20px] tracking-wider flex flex-col items-center gap-2">
               <span className="text-sm">CONTACT</span>
               <span className="bg-[linear-gradient(transparent_80%,#ffd803_80%)]">
-                お問い合わせ
+                案件ご依頼のお問い合わせ
               </span>
             </h3>
 
@@ -259,6 +261,8 @@ const Home = () => {
               ご依頼・ご相談等、お気軽にお問い合わせください。
               <br />
               担当者より折り返しご連絡いたします。
+              <br />
+              <span className="text-red">※恐れ入りますが、営業目的の連絡は固くお断りいたします。</span>
             </p>
 
             <form
@@ -316,21 +320,6 @@ const Home = () => {
                   <label htmlFor="content_business" className="flex items-center gap-2">
                     <input type="radio" id="content_business" name="business" required />
                     コンテンツ制作/メディア運営事業
-                  </label>
-                </div>
-              </div>
-              <div className="flex flex-col gap-2">
-                <label className="font-bold" htmlFor="inquiry_type">
-                  お問い合わせ種別
-                </label>
-                <div className="grid grid-cols-2 gap-2">
-                  <label htmlFor="inquiry_type_project" className="flex items-center gap-2">
-                    <input type="radio" id="inquiry_type_project" name="inquiry_type" required />
-                    案件のご相談
-                  </label>
-                  <label htmlFor="inquiry_type_other" className="flex items-center gap-2">
-                    <input type="radio" id="inquiry_type_other" name="inquiry_type" required />
-                    その他お問い合わせ
                   </label>
                 </div>
               </div>
