@@ -127,7 +127,7 @@ const Home = () => {
             <h3 className="font-bold text-primary-dark md:text-[26px] text-[20px] tracking-wider flex flex-col gap-2">
               <span className="text-sm">DEVELOPMENT</span>
               <span className="bg-[linear-gradient(transparent_80%,#ffd803_80%)]">
-                プロダクト開発事業
+                Web開発支援事業
               </span>
             </h3>
 
@@ -135,10 +135,6 @@ const Home = () => {
               要件定義から設計・開発・テスト実装、リリース後のサポートまで、システム開発に関わる一貫した対応が可能です。
               <br />
               コミュニケーションを取りながら最適な要件を策定し、品質やスケーラビリティを重視しつつも最速でのリリースを目指します。
-              <br />
-              <br />
-              Webやアプリのビジネスを始める上で必要な初期開発から、機能追加に至るまで幅広く対応いたします。
-              <br />
             </p>
 
             <div className="flex flex-col gap-2">
@@ -148,19 +144,7 @@ const Home = () => {
                 <li>開発</li>
                 <li>テスト実装</li>
                 <li>技術選定やアーキテクチャ設計などの技術コンサルティング</li>
-              </ul>
-            </div>
-
-            <div className="flex flex-col gap-2">
-              <h4 className="font-bold md:text-xl text-lg">対応実績のある技術スタック</h4>
-              <ul className="list-disc list-inside pl-4 text-primary-dark text-md tracking-wider">
-                <li>フロントエンド：React(Next.js), Vue.js(Nuxt), TailwindCSS, Storybook</li>
-                <li>バックエンド：TypeScript, Go, GraphQL</li>
-                <li>モバイル：Flutter</li>
-                <li>インフラ：AWS,GCPの各種サービス ※Terraformによる構築自動化の経験あり</li>
-                <li>
-                  その他：デザインシステム構築、リアーキテクチャ、StripeSDKを利用した決済システム構築実績あり
-                </li>
+                <li>UI・UX/SEOを意識した様々な改善のご提案</li>
               </ul>
             </div>
 
@@ -315,7 +299,7 @@ const Home = () => {
                 <div className="grid grid-cols-2 gap-2">
                   <label htmlFor="development_business" className="flex items-center gap-2">
                     <input type="radio" id="development_business" name="business" required />
-                    プロダクト開発事業
+                    Web開発支援事業
                   </label>
                   <label htmlFor="content_business" className="flex items-center gap-2">
                     <input type="radio" id="content_business" name="business" required />
