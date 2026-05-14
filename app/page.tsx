@@ -156,7 +156,7 @@ const Home = () => {
                 </div>
                 <div className="flex flex-col gap-2 flex-1">
                   <p className="font-bold md:text-xl text-lg">小宮山 貴史</p>
-                  <p className="text-md text-gray-600">
+                  <p className="text-sm text-gray-600">
                     業界歴8年のシステムエンジニアとして活動。
                     <br />
                     大学時代にITの仕事と出会い、その楽しさに魅了される。
@@ -242,11 +242,12 @@ const Home = () => {
             </h3>
 
             <p className="text-white text-md text-center tracking-wider">
-              ご依頼・ご相談等、お気軽にお問い合わせください。
+              新規案件のご依頼・ご相談等、お気軽にお問い合わせください。
               <br />
               担当者より折り返しご連絡いたします。
               <br />
-              <span className="text-red">※恐れ入りますが、営業目的の連絡は固くお断りいたします。</span>
+              <br />
+              <span className="text-[#DC143C]">※恐れ入りますが、営業目的の連絡は固くお断りいたします。</span>
             </p>
 
             <form
